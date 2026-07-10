@@ -1,0 +1,8 @@
+Date,Description,Amount,Type
+2026-01-01,Salary,50000,Income
+2026-01-02,Amazon,-2500,Expense
+2026-01-03,Uber,-250,Expense
+2026-01-03,Uber,-250,Expense
+2026-01-05,,-800,Expense
+2026-01-07,Electricity Bill,-1200,Expense
+2026-01-10,Freelance,10000,Income

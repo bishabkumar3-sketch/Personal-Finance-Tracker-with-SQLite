@@ -6,7 +6,11 @@ def main():
 
     transactions = load_transactions(file_path)
 
+    print("Cleaned Transactions:")
     print(transactions)
+
+    print("\nData Types:")
+    print(transactions.dtypes)
 
 
 if __name__ == "__main__":
