@@ -1,6 +1,6 @@
 from import_data import load_transactions
 from database import create_connection, view_transactions
-
+from database import view_expenses
 transaction = view_transactions()
 
 for transaction in transaction:
@@ -18,22 +18,11 @@ def main():
     print(transactions.dtypes)
     print(transactions)
 
-def view_expenses():
-    conn = create_connection()
-    cursor = conn.cursor()
 
-    cursor.execute("""
-        SELECT *
-        FROM transactions
-        WHERE type='Expense'
-    """)
+expenses = view_expenses()
 
-    rows = cursor.fetchall()
-
-    conn.close()
-
-    return rows
-
+for expense in expenses:
+    print(expense)
 if __name__ == "__main__":
     main()
 
