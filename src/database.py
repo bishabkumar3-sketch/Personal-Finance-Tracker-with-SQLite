@@ -113,3 +113,41 @@ def largest_expense():
     conn.close()
 
     return row
+
+
+def create_table():
+    conn = create_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS transactions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            date TEXT,
+            description TEXT,
+            amount REAL,
+            type TEXT
+        )
+    """)
+
+    conn.commit()
+    conn.close()
+
+
+def insert_transactions(df):
+    conn = create_connection()
+    cursor = conn.cursor()
+
+    for _, row in df.iterrows():
+        cursor.execute("""
+            INSERT INTO transactions
+            (date, description, amount, type)
+            VALUES (?, ?, ?, ?)
+        """, (
+            row["date"],
+            row["description"],
+            row["amount"],
+            row["type"]
+        ))
+
+    conn.commit()
+    conn.close()

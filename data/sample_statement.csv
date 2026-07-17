@@ -1,8 +1,21 @@
-Date,Description,Amount,Type
+date,description,amount,type
 2026-01-01,Salary,50000,Income
-2026-01-02,Amazon,-2500,Expense
-2026-01-03,Uber,-250,Expense
-2026-01-03,Uber,-250,Expense
-2026-01-05,,-800,Expense
-2026-01-07,Electricity Bill,-1200,Expense
-2026-01-10,Freelance,10000,Income
+2026-01-02,Grocery,2500,Expense
+2026-01-03,Electricity Bill,1800,Expense
+2026-01-04,Internet Bill,999,Expense
+2026-01-05,Freelance Project,12000,Income
+2026-01-06,Restaurant,850,Expense
+2026-01-07,Movie,450,Expense
+2026-01-08,Bus Pass,1200,Expense
+2026-01-09,Medicine,650,Expense
+2026-01-10,Gym Membership,1500,Expense
+2026-01-11,Gift Received,3000,Income
+2026-01-12,Shopping,4200,Expense
+2026-01-13,Rent,12000,Expense
+2026-01-14,Coffee,250,Expense
+2026-01-15,Fuel,3000,Expense
+2026-01-16,Bonus,8000,Income
+2026-01-17,Mobile Recharge,399,Expense
+2026-01-18,Books,1800,Expense
+2026-01-19,Laptop Purchase,65000,Expense
+2026-01-20,Interest,1500,Income
