@@ -15,6 +15,7 @@ def load_transactions(file_path):
     df.drop_duplicates(inplace=True)
 
     # Convert the Date column to datetime
-    df["Date"] = pd.to_datetime(df["Date"])
+    df["date"] = pd.to_datetime(df["date"])
+    df["date"] = df["date"].dt.strftime("%Y-%m-%d")
     return df
 
