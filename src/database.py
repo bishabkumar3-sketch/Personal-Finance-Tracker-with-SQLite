@@ -132,17 +132,21 @@ def create_table():
     conn.commit()
     conn.close()
 
-
 def insert_transactions(df):
     conn = create_connection()
     cursor = conn.cursor()
-    cursor.execute("""
-    INSERT INTO transactions
-    (date, description, amount, type)
-    VALUES (?, ?, ?, ?)
-    """, (
-        df["date"].strftime("%Y-%m-%d"),
-        df["description"],
-        df["amount"],
-        df["type"]
-    ))
+
+    for _, row in df.iterrows():
+        cursor.execute("""
+            INSERT INTO transactions
+            (date, description, amount, type)
+            VALUES (?, ?, ?, ?)
+        """, (
+            row["date"],
+            row["description"],
+            row["amount"],
+            row["type"]
+        ))
+
+    conn.commit()
+    conn.close()
