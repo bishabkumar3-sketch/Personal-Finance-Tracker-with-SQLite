@@ -1,21 +1,21 @@
-date,description,amount,type
-2026-01-01,Salary,50000,Income
-2026-01-02,Grocery,2500,Expense
-2026-01-03,Electricity Bill,1800,Expense
-2026-01-04,Internet Bill,999,Expense
-2026-01-05,Freelance Project,12000,Income
-2026-01-06,Restaurant,850,Expense
-2026-01-07,Movie,450,Expense
-2026-01-08,Bus Pass,1200,Expense
-2026-01-09,Medicine,650,Expense
-2026-01-10,Gym Membership,1500,Expense
-2026-01-11,Gift Received,3000,Income
-2026-01-12,Shopping,4200,Expense
-2026-01-13,Rent,12000,Expense
-2026-01-14,Coffee,250,Expense
-2026-01-15,Fuel,3000,Expense
-2026-01-16,Bonus,8000,Income
-2026-01-17,Mobile Recharge,399,Expense
-2026-01-18,Books,1800,Expense
-2026-01-19,Laptop Purchase,65000,Expense
-2026-01-20,Interest,1500,Income
+date,description,category,amount,type
+2026-01-01,Salary,Salary,50000,Income
+2026-01-02,Grocery,Food,2500,Expense
+2026-01-03,Electricity Bill,Utilities,1800,Expense
+2026-01-04,Internet Bill,Utilities,999,Expense
+2026-01-05,Freelance,Freelance,12000,Income
+2026-01-06,Restaurant,Food,850,Expense
+2026-01-07,Movie,Entertainment,450,Expense
+2026-01-08,Bus Pass,Transport,1200,Expense
+2026-01-09,Medicine,Healthcare,650,Expense
+2026-01-10,Gym,Gym,1500,Expense
+2026-01-11,Gift,Gift,3000,Income
+2026-01-12,Shopping,Shopping,4200,Expense
+2026-01-13,Rent,Housing,12000,Expense
+2026-01-14,Coffee,Food,250,Expense
+2026-01-15,Fuel,Transport,3000,Expense
+2026-01-16,Bonus,Bonus,8000,Income
+2026-01-17,Recharge,Utilities,399,Expense
+2026-01-18,Books,Education,1800,Expense
+2026-01-19,Laptop,Electronics,65000,Expense
+2026-01-20,Interest,Investment,1500,Income
