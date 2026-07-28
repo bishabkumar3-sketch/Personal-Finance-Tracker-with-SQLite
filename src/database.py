@@ -1,4 +1,5 @@
 import sqlite3
+
 db_name = "finance_tracker.db"
 
 def create_connection():
@@ -124,6 +125,7 @@ def create_table():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             date TEXT,
             description TEXT,
+            category TEXT,
             amount REAL,
             type TEXT
         )
@@ -139,14 +141,16 @@ def insert_transactions(df):
     for _, row in df.iterrows():
         cursor.execute("""
             INSERT INTO transactions
-            (date, description, amount, type)
-            VALUES (?, ?, ?, ?)
+            (date, description, category, amount, type)
+            VALUES (?, ?, ?, ?, ?)
         """, (
             row["date"],
             row["description"],
+            row["category"],
             row["amount"],
             row["type"]
         ))
 
     conn.commit()
     conn.close()
+
