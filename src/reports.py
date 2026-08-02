@@ -4,7 +4,11 @@ import matplotlib.pyplot as plt
 
 def load_data():
     conn = sqlite3.connect("finance_tracker.db")
-    query = "SELECT * FROM transactions"
-    df = pd.read_sql_query(query, conn)
-    conn.close()
+
+    df = pd.read_sql_query("SELECT * FROM TRANSACTIONS", conn)
+
+    conn.close
+
     return df
+
+
