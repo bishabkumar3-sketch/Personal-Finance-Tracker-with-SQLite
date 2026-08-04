@@ -32,3 +32,11 @@ def expense_by_category():
 
     plt.close()
     plt.show()
+
+
+def income_vs_exense():
+    df = load_data()
+
+    summary = df.groupby("type")["amount"].sum()
+
+    
