@@ -49,3 +49,10 @@ def income_vs_exense():
     plt.savefig("reports/income_vs_expense.png")
 
     plt.close()
+
+def monthly_expense():
+    df = load_data()
+
+    df["date "] = pd.to_datetime(df["date"])
+
+    
