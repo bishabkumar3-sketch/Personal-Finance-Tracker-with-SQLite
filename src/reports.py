@@ -39,4 +39,13 @@ def income_vs_exense():
 
     summary = df.groupby("type")["amount"].sum()
 
-    
+    plt.figure(figsize=(8, 6))
+
+    summary.plot(kind="pie", autopct="%1.1f%%", startangle=90, colors=["lightgreen", "salmon"])
+
+    plt.title("Income vs Expense")
+    plt.ylabel("")
+
+    plt.savefig("reports/income_vs_expense.png")
+
+    plt.close()
