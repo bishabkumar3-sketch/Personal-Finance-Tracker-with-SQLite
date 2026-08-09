@@ -58,4 +58,13 @@ def monthly_expense():
 
     monthly = expenses.goupby(df["date"] .dt.to_period("M"))["amount"].sum()
 
-    
+    monthly.index = monthly.index.astype(str)
+
+    plt.figure(figsize=(10, 6))
+
+    monthly.plot(kind="line", marker="o", color="orange")
+
+    plt.title("Monthly Expenses")
+    plt.xlabel("Month")
+
+    plt.ylabel("Amount")
