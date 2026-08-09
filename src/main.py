@@ -1,5 +1,7 @@
 from import_data import load_transactions
 from database import *
+from reports import (expense_by_category, income_vs_expense, monthly_expense)
+
 
 def main():
     file_path = "data/sample_statement.csv"
@@ -37,3 +39,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+expense_by_category()
+income_vs_expense()
+monthly_expense()
+print("Reports generated and saved in the 'reports' directory.")
