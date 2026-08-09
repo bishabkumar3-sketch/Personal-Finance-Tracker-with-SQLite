@@ -68,3 +68,11 @@ def monthly_expense():
     plt.xlabel("Month")
 
     plt.ylabel("Amount")
+
+    plt.grid(True)
+
+    plt.tight_layout()
+
+    plt.savefig("reports/monthly_expenses.png")
+
+    plt.close()
