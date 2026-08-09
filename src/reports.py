@@ -54,5 +54,4 @@ def monthly_expense():
     df = load_data()
 
     df["date "] = pd.to_datetime(df["date"])
-
     
