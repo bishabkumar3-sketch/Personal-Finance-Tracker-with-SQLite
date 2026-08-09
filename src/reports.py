@@ -54,4 +54,8 @@ def monthly_expense():
     df = load_data()
 
     df["date "] = pd.to_datetime(df["date"])
+    expenses = df[df["type"] == "expense"]
+
+    monthly = expenses.goupby(df["date"] .dt.to_period("M"))["amount"].sum()
+
     
