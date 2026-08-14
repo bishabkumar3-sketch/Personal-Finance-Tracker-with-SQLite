@@ -11,7 +11,7 @@ def load_data():
 
     return df
 
-
+# this is expense by category function
 def expense_by_category():
     
     df = load_data()
