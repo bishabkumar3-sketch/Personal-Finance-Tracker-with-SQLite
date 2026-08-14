@@ -33,7 +33,7 @@ def expense_by_category():
     plt.close()
     plt.show()
 
-
+# this is income vs expense function
 def income_vs_exense():
     df = load_data()
 
