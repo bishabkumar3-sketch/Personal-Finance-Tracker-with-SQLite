@@ -19,3 +19,6 @@ def financial_summary():
 
     return income, expenses, balance
 
+def highest_spending_salary():
+
+    
