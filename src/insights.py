@@ -8,6 +8,8 @@ def load_data():
 
     conn.close()
     return df
+
+
 def financial_summary():
     df = load_data()
     income = df[df["type"] == "income"]["amount"].sum()
@@ -16,3 +18,4 @@ def financial_summary():
     balance = income - expenses
 
     return income, expenses, balance
+
