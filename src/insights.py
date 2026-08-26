@@ -19,6 +19,9 @@ def financial_summary():
 
     return income, expenses, balance
 
-def highest_spending_salary():
+def highest_spending_category():
 
+    df = load_data()
+
+    expenses = df[df["type"] == "expense"]
     
