@@ -24,4 +24,7 @@ def highest_spending_category():
     df = load_data()
 
     expenses = df[df["type"] == "expense"]
+
+    category_total = expenses.groupby("category")["amount"].sum()
     
+    return category_total.idxmax(), category_total.max()
