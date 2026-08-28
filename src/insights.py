@@ -35,3 +35,8 @@ def largest_expense():
     df = load_data()
 
     expenses = df[df["type"] == "expense"]
+
+    largest = expenses.loc[expenses["amount"].idxmax()]
+
+    return largest
+
