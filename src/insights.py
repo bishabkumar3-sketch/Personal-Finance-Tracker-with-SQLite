@@ -48,4 +48,33 @@ def average_expense():
 
     return expenses["amount"].mean()
 
+def generate_summary():
 
+    income , expenses, balance = financial_summary()
+
+    category, category_amount = highest_spending_category()
+
+    largest = largest_expense()
+    avg_expense = average_expense()
+
+    print("\n===== Financial Summary =====")
+
+    print(f"Total Income : ₹{income:.2f}")
+    print(f"Total Expenses : ₹{expenses:.2f}")
+    print(f"Balance : ₹{balance:.2f}")
+
+    print("\n---------SPENDING INSIGHT-----------")
+
+    print(
+        f"highest category: {category}"
+        f"({category_amount:.2f})"
+    )
+
+    print(
+        f"largest expense: {largest["description"]}"
+        f"({largest["amount"]:.2f})"
+    )
+
+    print(f"average expense: ₹{avg_expense:.2f}")
+
+    print("\n=====================================")
