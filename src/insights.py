@@ -40,3 +40,12 @@ def largest_expense():
 
     return largest
 
+def average_expense():
+
+    df = load_data()
+
+    expenses = df[df["type"] == "expense"]
+
+    return expenses["amount"].mean()
+
+
