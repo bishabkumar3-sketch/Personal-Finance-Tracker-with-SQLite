@@ -1,7 +1,7 @@
 from import_data import load_transactions
 from database import *
 from reports import (expense_by_category, income_vs_expense, monthly_expense)
-
+from insights import genrate_summary
 
 def main():
     file_path = "data/sample_statement.csv"
@@ -43,4 +43,5 @@ if __name__ == "__main__":
 expense_by_category()
 income_vs_expense()
 monthly_expense()
+generate_summary()
 print("Reports generated and saved in the 'reports' directory.")
