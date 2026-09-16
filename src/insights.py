@@ -85,4 +85,12 @@ def monthly_summary(month,year):
 
     df["date"] = pd.to_datetime(df["date"])
 
-    
+    monthly = df[(df["date"].dt.month == month) & (df["date"].dt.year == year)]
+
+    income = monthly[monthly["type"] == "income"]["amount"].sum()
+
+    expenses = monthly[monthly["type"] == "expense"]["amount"].sum()
+
+    balance = income - expenses
+
+    return monthly, income, expenses, balance
