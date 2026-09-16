@@ -78,3 +78,11 @@ def generate_summary():
     print(f"average expense: ₹{avg_expense:.2f}")
 
     print("\n=====================================")
+
+def monthly_summary(month,year):
+
+    df = load_data()
+
+    df["date"] = pd.to_datetime(df["date"])
+
+    
