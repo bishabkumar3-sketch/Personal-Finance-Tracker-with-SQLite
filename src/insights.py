@@ -94,3 +94,19 @@ def monthly_summary(month,year):
     balance = income - expenses
 
     return monthly, income, expenses, balance
+
+def monthly_top_category(month, year):
+
+    monthly, _, _, _ = monthly_summary(month, year)
+
+    expenses = monthly[monthly["type"] == "expense"]
+
+    if expenses.empty:
+        return None, 0
+    
+    category_total = expenses.groupby("category")["amount"].sum()
+
+    category_total = category_total.idmax(), category_total.max()
+
+    return category_total
+
