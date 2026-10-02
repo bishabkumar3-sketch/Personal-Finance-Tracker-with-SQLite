@@ -116,4 +116,17 @@ def generate_monthly_report(month, year):
 
     category, category_amount = monthly_top_category(month, year)
 
-    
+    print(f"\n===== Monthly Financial Summary for {month}/{year} =====")
+
+    print(f"month : {year}-{month:02d}")
+    print(f"monthly Income : ₹{income:.2f}")
+    print(f"monthly Expenses : ₹{expenses:.2f}")
+    print(f"monthly Balance : ₹{balance:.2f}")
+
+    if category is not None:
+        print(f"highest spending category: {category} ({category_amount:.2f})")
+    else:
+        print("No expenses recorded for this month.")
+
+
+    print("===============================================")
