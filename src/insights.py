@@ -110,3 +110,10 @@ def monthly_top_category(month, year):
 
     return category_total
 
+def generate_monthly_report(month, year):
+
+    monthly, income, expenses, balance = monthly_summary(month, year)
+
+    category, category_amount = monthly_top_category(month, year)
+
+    
